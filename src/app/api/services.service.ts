@@ -82,8 +82,8 @@ export class ServicesService {
      return this.http.put(this.host+"/restore/"+id, {reponseType:'text'});
    }
 
-   loginPassword(numero: any, password: any){
-    return this.http.get(this.host+'/login/'+numero+'/'+password);
+   loginPassword(login: any, password: any){
+    return this.http.get(this.host+'/admin/login/'+login+'/'+password);
    }
 
    Activiter(id: any){

@@ -26,8 +26,7 @@ export class HeaderComponent implements OnInit {
   }
 
   LogOut(){
-    localStorage.removeItem;
-    // window.location.reload();
+    this.service.logout();
     this.route.navigate(['/login'])
   }
 }

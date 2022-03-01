@@ -10,6 +10,7 @@ import { TuteurComponent } from './tuteur/tuteur.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
 {
   path: 'default',
   component: DefaultComponent,
@@ -42,7 +43,7 @@ const routes: Routes = [
 ]
 },
 {
-  path: '',
+  path: 'login',
   component: LoginComponent
 }
 ];

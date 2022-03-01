@@ -16,9 +16,22 @@
 }
 
 .user {
+    background: purple;
+}
+
+.accepter {
     background: green;
+}
+
+.rejetter {
+    background: red;
+}
+
+.notifice {
+    background: #004D91;
 }
 
 mat-icon {
     font-size: 4.2rem;
+    color: aliceblue;
 }
