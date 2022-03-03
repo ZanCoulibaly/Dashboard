@@ -95,4 +95,16 @@ export class ServicesService {
      localStorage.removeItem('loginStatus');
      this.route.navigate(['login'])
    }
+   nombreTuteur(){
+     return this.http.get(this.host+"/nombre/tuteur");
+   }
+   nombreParent(){
+    return this.http.get(this.host+"/nombre/parent");
+  }
+  nombreEleve(){
+    return this.http.get(this.host+"/nombre/eleve");
+  }
+  nombreEcole(){
+    return this.http.get(this.host+"/nombre/ecole");
+  }
 }

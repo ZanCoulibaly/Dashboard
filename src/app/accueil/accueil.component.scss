@@ -20,18 +20,22 @@
 }
 
 .accepter {
-    background: green;
+    background: rgb(104, 172, 104);
 }
 
 .rejetter {
-    background: red;
+    background: rgb(192, 82, 82);
 }
 
 .notifice {
-    background: #004D91;
+    background: #7da8ce;
 }
 
 mat-icon {
     font-size: 4.2rem;
     color: aliceblue;
+}
+
+p {
+    font-size: 1rem;
 }

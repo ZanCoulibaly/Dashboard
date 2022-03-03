@@ -10,7 +10,8 @@
             <ul fxLayout="row" fxLayoutGap="20px">
                 <li>
                     <button mat-button [matMenuTriggerFor]="menu">
-                        <mat-icon>person_outline</mat-icon>
+                      <img src="./assets/tutorat.png" alt="" class="user-image mr-1 p-2" />
+                        &nbsp;<b>Root</b>
                     </button>
                     <mat-menu #menu="matMenu">
                         <button type="reset" mat-menu-item class="discont" (click)='LogOut()'>
