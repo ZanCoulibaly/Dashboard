@@ -1,6 +1,6 @@
 <mat-grid-list cols="3" rowHeight="2:1">
     <mat-grid-tile>
-        <mat-card class="example-card tuteur">
+        <mat-card class="example-card tuteur" (click)="nmbreTuteur()">
             <mat-card-title>Tuteur</mat-card-title>
             <mat-card-content>
                 <p>
@@ -11,7 +11,7 @@
         </mat-card>
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-card class="example-card ecole">
+        <mat-card class="example-card ecole" (click)="nmbreEcole()">
             <mat-card-title>Ecole</mat-card-title>
             <mat-card-content>
                 <p>
@@ -22,7 +22,7 @@
         </mat-card>
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-card class="example-card user">
+        <mat-card class="example-card user" (click)="nmbreParent()">
             <mat-card-title>Parent & Elève</mat-card-title>
             <mat-card-content>
                 <p>

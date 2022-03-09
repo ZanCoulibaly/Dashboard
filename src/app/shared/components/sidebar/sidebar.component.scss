@@ -16,7 +16,9 @@
             border-radius: 5px;
             margin: 0 8px;
             &:hover {
-                background: #80a4df !important;
+                background: #4A58B9 !important;
+                transition: 0.5s;
+                border-radius: 0 1rem 0 1rem;
                 // background: #393a3d !important;
             }
         }
@@ -28,8 +30,14 @@
      ::ng-deep {
         .mat-list-item-content {
             background: #1652b4!important;
+            border-radius: 0 1rem 0 1rem;
+            mat-icon {
+                color: #fff;
+            }
             &:hover {
                 background: #1652b4 !important;
+                transition: 0.5s;
+                // border-radius: 0 1rem 0 1rem;
             }
         }
     }

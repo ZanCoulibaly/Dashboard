@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicesService } from '../api/services.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { ServicesService } from '../api/services.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  login: any;
+  login: any ={};
   password: any;
   data: any
 
@@ -20,16 +21,35 @@ export class LoginComponent implements OnInit {
   loginPass(data){
     this.service.loginPassword(data.value.login, data.value.password).subscribe(donne =>{
       console.log(donne);
-      if(donne==""){
-        return console.error("mot de pass ou numéro incorrect")
+      if(!donne){
+        return this.sweetAlert();
       }else{
-        let satatus : number = 1;
-        localStorage.setItem('loginInfo', JSON.stringify(donne));
-        localStorage.setItem('Status', JSON.stringify(satatus));
+        localStorage.setItem('logInfo',JSON.stringify(donne));
         this.route.navigate(['default']);
-        // window.location.reload();
+        this.validre();
       }
-
+      data.reset();
+    });
+  }
+  sweetAlert() {
+    Swal.fire({
+      title: 'Erreur',
+      text: 'Login et mot de pass incorrect',
+      icon: 'error',
+      showCloseButton: true,
+      // showCancelButton: true,
+      showLoaderOnConfirm: true,
+      confirmButtonText: 'Ok',
+      cancelButtonText: 'Annuler'
+    })
+  }
+  validre(){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Bienvenue sur dashboard',
+      showConfirmButton: false,
+      timer: 1500
     })
   }
 

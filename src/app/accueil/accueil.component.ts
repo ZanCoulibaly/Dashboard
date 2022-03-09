@@ -1,5 +1,6 @@
 import { ServicesService } from 'src/app/api/services.service';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-accueil',
@@ -47,5 +48,49 @@ export class AccueilComponent implements OnInit {
       this.E= result;
     })
   }
+  nmbreParent(){
+    Swal.fire({
+      // background: '#004D91',
+      title: '<strong style="color:#fff">NombreTotale</strong>',
+      icon: 'info',
+      html:
+        '<b >Parents:  ' + this.p+'</b> </br>'+
+        '<b >Elèves:  ' + this.e+'</b> ',
+      showCloseButton: true,
+      confirmButtonColor: 'purple',
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Merci !',
+      confirmButtonAriaLabel: 'Merci ',
+    })
+  }
 
+  nmbreTuteur(){
+    Swal.fire({
+      // background: '#ff8000',
+      title: '<strong>NombreTotale</strong>',
+      icon: 'info',
+      html:
+        '<b>Parents:  ' + this.t+'</b>',
+      showCloseButton: true,
+      confirmButtonColor: '#ff8000',
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Merci !',
+      confirmButtonAriaLabel: 'Merci ',
+    })
+  }
+
+  nmbreEcole(){
+    Swal.fire({
+      // background: '#ff8000',
+      title: '<strong>NombreTotale</strong>',
+      icon: 'info',
+      html:
+        '<b>Parents:  ' + this.E+'</b>',
+      showCloseButton: true,
+      confirmButtonColor: '#004D91',
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Merci !',
+      confirmButtonAriaLabel: 'Merci ',
+    })
+  }
 }

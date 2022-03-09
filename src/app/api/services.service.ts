@@ -82,8 +82,8 @@ export class ServicesService {
      return this.http.put(this.host+"/restore/"+id, {reponseType:'text'});
    }
 
-   loginPassword(login: any, password: any){
-    return this.http.get(this.host+'/admin/login/'+login+'/'+password);
+   loginPassword(login: string, password: string){
+    return this.http.get(this.host+'/admin/loginPass/'+login+'/'+password);
    }
 
    Activiter(id: any){
@@ -93,13 +93,14 @@ export class ServicesService {
    logout(){
      localStorage.removeItem('loginInfo');
      localStorage.removeItem('loginStatus');
+    // localStorage.clear();
      this.route.navigate(['login'])
    }
    nombreTuteur(){
      return this.http.get(this.host+"/nombre/tuteur");
    }
    nombreParent(){
-    return this.http.get(this.host+"/nombre/parent");
+    return this.http.get(this.host+"/nombre/users");
   }
   nombreEleve(){
     return this.http.get(this.host+"/nombre/eleve");
