@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   login: any ={};
   password: any;
   data: any
+  delta: any
 
   constructor(public service: ServicesService,
     public route: Router) { }
@@ -21,10 +22,11 @@ export class LoginComponent implements OnInit {
   loginPass(data){
     this.service.loginPassword(data.value.login, data.value.password).subscribe(donne =>{
       console.log(donne);
-      if(!donne){
+      this.delta=donne;
+      if(!this.delta){
         return this.sweetAlert();
       }else{
-        localStorage.setItem('logInfo',JSON.stringify(donne));
+        localStorage.setItem('logInfo', this.delta);
         this.route.navigate(['default']);
         this.validre();
       }
@@ -47,7 +49,7 @@ export class LoginComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Bienvenue sur dashboard',
+      title: 'Bienvenue <b style="color:#ff8000">'+this.delta.prenom+ '&nbsp' +this.delta.nom+'</b>',
       showConfirmButton: false,
       timer: 1500
     })

@@ -6,6 +6,7 @@ import { EcoleComponent } from './ecole/ecole.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { AuthGuard } from './services/auth.guard';
 import { TuteurComponent } from './tuteur/tuteur.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
 {
   path: 'default',
   component: DefaultComponent,
+  canActivate:[AuthGuard],
   children: [
     { path: '', redirectTo: 'accueil', pathMatch: 'full' },
     {

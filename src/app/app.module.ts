@@ -23,6 +23,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { AuthGuard } from './services/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatGridListModule,
     HighchartsChartModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
