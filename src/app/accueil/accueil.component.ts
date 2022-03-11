@@ -31,7 +31,7 @@ export class AccueilComponent implements OnInit {
     })
   }
   parent(){
-    this.service.nombreParent().subscribe(result=>{
+    this.service.nombreParent2().subscribe(result=>{
       // console.log(res);
       this.p= result;
     })
@@ -70,7 +70,7 @@ export class AccueilComponent implements OnInit {
       title: '<strong>NombreTotale</strong>',
       icon: 'info',
       html:
-        '<b>Parents:  ' + this.t+'</b>',
+        '<b>Tuteur:  ' + this.t+'</b>',
       showCloseButton: true,
       confirmButtonColor: '#ff8000',
       confirmButtonText:
@@ -85,7 +85,7 @@ export class AccueilComponent implements OnInit {
       title: '<strong>NombreTotale</strong>',
       icon: 'info',
       html:
-        '<b>Parents:  ' + this.E+'</b>',
+        '<b>Ecole:  ' + this.E+'</b>',
       showCloseButton: true,
       confirmButtonColor: '#004D91',
       confirmButtonText:

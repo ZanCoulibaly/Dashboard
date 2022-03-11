@@ -102,6 +102,9 @@ export class ServicesService {
    nombreParent(){
     return this.http.get(this.host+"/nombre/users");
   }
+  nombreParent2(){
+    return this.http.get(this.host+"/nombre/parent");
+  }
   nombreEleve(){
     return this.http.get(this.host+"/nombre/eleve");
   }
