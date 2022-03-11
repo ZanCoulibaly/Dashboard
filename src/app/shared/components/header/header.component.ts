@@ -11,10 +11,13 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
-
+  users: any;
   constructor(private route: Router, private service: ServicesService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.users =JSON.parse(localStorage.getItem('logInfo'));
+    console.log(this.users);
+   }
 
   toggleSideBar() {
     this.toggleSideBarForMe.emit();
@@ -26,7 +29,7 @@ export class HeaderComponent implements OnInit {
   }
 
   LogOut(){
-    localStorage.removeItem("logInfo");
+    localStorage.removeItem('logInfo');
     this.route.navigate(['/login']);
   }
 }
