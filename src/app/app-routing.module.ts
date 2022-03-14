@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
 import { CorbeilleComponent } from './corbeille/corbeille.component';
 import { EcoleComponent } from './ecole/ecole.component';
+import { ForgetpassComponent } from './forgetpass/forgetpass.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
@@ -47,6 +48,10 @@ const routes: Routes = [
 {
   path: 'login',
   component: LoginComponent
+},
+{
+  path: 'forgetpass',
+  component: ForgetpassComponent
 }
 ];
 
