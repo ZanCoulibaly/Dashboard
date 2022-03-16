@@ -11,12 +11,12 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
-  users: any;
+  data: any;
   constructor(private route: Router, private service: ServicesService) { }
 
   ngOnInit() {
-    this.users =JSON.parse(localStorage.getItem('logInfo'));
-    console.log(this.users);
+this.data=JSON.parse(localStorage.getItem('logInfo'));
+  console.log('vvbxbb', this.data)
    }
 
   toggleSideBar() {

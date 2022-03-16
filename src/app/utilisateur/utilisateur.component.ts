@@ -44,7 +44,7 @@ export class UtilisateurComponent implements OnInit {
      return this.service.detailsParent(id).subscribe(
        data1=>{
         this.donne=JSON.parse(data1)
-         console.log(this.donne);
+        // console.log(this.donne);
          this.mode= 2;
          // this.listess();
      })

@@ -65,25 +65,25 @@
     </button>
 
             <!-- <div class="det"> -->
-            <form class="table-form" (ngSubmit)="modifier(ajouter)" #ajouter="ngForm">
+            <form class="table-form">
                 <table class="table-full-width" cellspacing="0">
                     <tr>
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Nom</mat-label>
-                                <input matInput [value]="delta.nom" name="nom" ngModel>
+                                <input matInput [value]="delta.nom" name="nom">
                             </mat-form-field>
                         </td>
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Prénom</mat-label>
-                                <input matInput [value]="delta.prenom" name="prenom" ngModel>
+                                <input matInput [value]="delta.prenom" name="prenom">
                             </mat-form-field>
                         </td>
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Matières à maîtriser</mat-label>
-                                <input matInput [value]="delta.cour" name="cour" ngModel>
+                                <input matInput [value]="delta.cour" name="cour">
                             </mat-form-field>
                         </td>
                     </tr>
@@ -92,11 +92,11 @@
                 <p>
                     <mat-form-field class="table-full-width" appearance="fill">
                         <mat-label>Téléphone</mat-label>
-                        <input matInput [value]="delta.numero" name="numero" ngModel>
+                        <input matInput [value]="delta.numero" name="numero">
                     </mat-form-field><br>
                     <mat-form-field class="table-full-width" appearance="fill">
                         <mat-label>Etablissement</mat-label>
-                        <input matInput [value]="delta.ecole" name="ecole" ngModel>
+                        <input matInput [value]="delta.ecole" name="ecole">
                     </mat-form-field>
                 </p>
 
@@ -105,13 +105,13 @@
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Addresse</mat-label>
-                                <input matInput [value]="delta.addresse" name="addresse" ngModel>
+                                <input matInput [value]="delta.addresse" name="addresse">
                             </mat-form-field>
                         </td>
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Profile</mat-label>
-                                <input matInput [value]="delta.profile" name="profile" ngModel>
+                                <input matInput [value]="delta.profile" name="profile">
                             </mat-form-field>
                         </td>
                         <td>

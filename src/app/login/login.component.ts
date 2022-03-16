@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       if(!this.delta){
         return this.sweetAlert();
       }else{
-        localStorage.setItem('logInfo', this.delta);
+        localStorage.setItem('logInfo', JSON.stringify(this.delta));
         this.route.navigate(['default']);
         this.validre();
       }

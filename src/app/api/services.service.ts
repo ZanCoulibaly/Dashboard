@@ -83,7 +83,7 @@ export class ServicesService {
    }
 
    loginPassword(login: string, password: string){
-    return this.http.get(this.host+'/admin/loginPass/'+login+'/'+password);
+    return this.http.get(this.host+'/admin/login/'+login+'/'+password);
    }
 
    Activiter(id: any){
