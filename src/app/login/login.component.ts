@@ -9,8 +9,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  login: any ={};
-  password: any;
+  login: any ='';
+  password: any='';
   data: any
   delta: any
 
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
   sweetAlert() {
     Swal.fire({
       title: 'Erreur',
-      text: 'Login et mot de pass incorrect',
+      text: 'Login ou mot de pass incorrect',
       icon: 'error',
       showCloseButton: true,
       // showCancelButton: true,

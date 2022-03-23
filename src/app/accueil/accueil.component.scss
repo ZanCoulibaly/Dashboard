@@ -1,5 +1,6 @@
 .example-card {
-    width: 250px;
+    width: 260px;
+    height: 150px;
     border-radius: 1rem;
     box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
     mat-card-title {
@@ -9,6 +10,9 @@
 
 .tuteur {
     background: #ff8000;
+        p {
+        color: #fff;
+    }
 }
 
 .ecole {

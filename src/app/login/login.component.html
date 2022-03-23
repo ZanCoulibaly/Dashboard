@@ -6,13 +6,13 @@
                     <h2 class="title">CONNEXION</h2>
                     <div class="input-field">
                         <mat-icon>person</mat-icon>
-                        <input type="text" placeholder="Login" name="login" ngModel />
+                        <input type="text" placeholder="Login" name="login" [(ngModel)]='login' ngModel />
                     </div>
                     <div class="input-field">
                         <mat-icon>key</mat-icon>
-                        <input type="password" placeholder="Password" name="password" ngModel />
+                        <input type="password" placeholder="Password" name="password" [(ngModel)]='password' ngModel />
                     </div>
-                    <button type="submit" value="Login" class="btn solid">Login</button>
+                    <button type="submit" value="Login" [disabled]="login==='' && password===''" class="btn solid">Login</button>
                 </form>
             </div>
         </div>
