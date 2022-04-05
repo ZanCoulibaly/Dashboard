@@ -49,10 +49,10 @@ export class ServicesService {
      return this.http.get(this.host+"/classe/totale");
     }
     NmbreTotalDemande(){
-      return this.http.get(this.host+"/demande/nombre/accepter");
+      return this.http.get(this.host+"/demande/accepter");
     }
     NmbreTotalRejetter(){
-      return this.http.get(this.host+"/demande/nombre/rejetter");
+      return this.http.get(this.host+"/demande/decliner");
     }
    //  deleteEleve(id:any){
    //    return this.http.put(this.host+"/del/" + id, {responseType:'text'});

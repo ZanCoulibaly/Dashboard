@@ -13,8 +13,8 @@ export class AccueilComponent implements OnInit {
   e: any;
   E: any;
   Classe: any;
-  D: any;
-  R: any;
+  accepter: any;
+  rejetter: any;
 
   constructor(private service: ServicesService) {
     this.tuteur();
@@ -25,6 +25,8 @@ export class AccueilComponent implements OnInit {
 
   ngOnInit(): void {
     this.nmbreClasse();
+    this.nmbreRejetter();
+    this.nmbreDemande();
   }
 
 
@@ -118,7 +120,7 @@ export class AccueilComponent implements OnInit {
       title: '<strong>NombreTotale</strong>',
       icon: 'info',
       html:
-        '<b>Accepter:  ' + this.D+'</b>',
+        '<b>Accepter:  ' + this.accepter+'</b>',
       showCloseButton: true,
       confirmButtonColor: 'rgb(104, 172, 104)',
       confirmButtonText:
@@ -132,7 +134,7 @@ export class AccueilComponent implements OnInit {
       title: '<strong>NombreTotale</strong>',
       icon: 'info',
       html:
-        '<b>Rejetter:  ' + this.R+'</b>',
+        '<b>Rejetter:  ' + this.rejetter+'</b>',
       showCloseButton: true,
       confirmButtonColor: 'rgb(192, 82, 82)',
       confirmButtonText:
@@ -149,14 +151,14 @@ export class AccueilComponent implements OnInit {
     })
   }
   nmbreDemande(){
-    this.service.NmbreTotalDemande().subscribe(res=>{
-      this.D= res;
-      console.log(res);
+    this.service.NmbreTotalDemande().subscribe(data=>{
+      this.accepter = data;
+      // console.log(this.D);
     })
   }
   nmbreRejetter(){
-    this.service.NmbreTotalRejetter().subscribe(res=>{
-      this.R= res;
+    this.service.NmbreTotalRejetter().subscribe(result=>{
+      this.rejetter = result;
     })
   }
 }
