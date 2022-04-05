@@ -9,6 +9,10 @@ table {
     border-collapse: collapse;
 }
 
+mat-icon {
+    font-size: 1.8rem;
+}
+
 // td {
 //     padding: 1px;
 //     justify-content: center;
@@ -16,9 +20,10 @@ table {
 // }
 td,
 th {
+    font-size: 1.5rem;
     text-align: left;
     justify-content: center;
-    padding: 8px;
+    padding: 10px;
 }
 
 tr:nth-child(even) {

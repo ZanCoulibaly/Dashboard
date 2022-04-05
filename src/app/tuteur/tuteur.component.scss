@@ -6,12 +6,24 @@
 
 table {
     width: 100%;
+    border-collapse: collapse;
 }
 
-td {
-    padding: 1px;
+// td {
+//     padding: 1px;
+//     justify-content: center;
+//     text-align: center;
+// }
+td,
+th {
+    font-size: 1.5rem;
+    text-align: left;
     justify-content: center;
-    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 button {
@@ -36,12 +48,16 @@ button {
 }
 
 .button1 {
-    margin-left: 70%;
     background-color: green;
     color: #fff;
     // font-size: 1.8rem;
     margin-bottom: 7px;
+    margin-left: 70%;
     justify-content: end;
+}
+
+mat-icon {
+    font-size: 1.8rem;
 }
 
 .table-form {
@@ -54,11 +70,6 @@ button {
     margin-left: 70%;
     background: blue;
     color: #fff;
-}
-
-h2 {
-    margin-bottom: 20px;
-    color: #000;
 }
 
 mat-list-item {

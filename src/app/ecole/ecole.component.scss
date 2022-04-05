@@ -6,12 +6,24 @@
 
 table {
     width: 100%;
+    border-collapse: collapse;
 }
 
-td {
-    padding: 1px;
+// td {
+//     padding: 1px;
+//     justify-content: center;
+//     text-align: center;
+// }
+td,
+th {
+    font-size: 1.5rem;
+    text-align: left;
     justify-content: center;
-    text-align: center;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 button {
@@ -29,7 +41,7 @@ button {
 }
 
 .det {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     justify-content: start;
     align-items: center;
     text-align: start;
@@ -40,7 +52,12 @@ button {
     color: #fff;
     // font-size: 1.8rem;
     margin-bottom: 7px;
+    margin-left: 70%;
     justify-content: end;
+}
+
+mat-icon {
+    font-size: 1.8rem;
 }
 
 .table-form {
@@ -53,4 +70,12 @@ button {
     margin-left: 70%;
     background: blue;
     color: #fff;
+}
+
+mat-list-item {
+    font-size: larger;
+}
+
+mat-list-item:nth-child(even) {
+    background-color: #dddddd;
 }
