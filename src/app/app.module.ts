@@ -26,6 +26,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { AuthGuard } from './services/auth.guard';
 import { ForgetpassComponent } from './forgetpass/forgetpass.component';
 import { AddRegionsComponent } from './add-regions/add-regions.component';
+import { ChartsModule, ChartSimpleModule, WavesModule } from 'ng-uikit-pro-standard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,9 @@ import { AddRegionsComponent } from './add-regions/add-regions.component';
     AddRegionsComponent,
   ],
   imports: [
+    ChartsModule,
+    ChartSimpleModule,
+    WavesModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

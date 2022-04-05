@@ -10,6 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardService } from 'src/app/modules/dashboard.service';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { ChartsModule, ChartSimpleModule, WavesModule } from 'ng-uikit-pro-standard';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     PostsComponent
   ],
   imports: [
+    ChartsModule,
+    ChartSimpleModule,
+    WavesModule,
     CommonModule,
     RouterModule,
     SharedModule,

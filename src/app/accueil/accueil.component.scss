@@ -10,7 +10,7 @@
 
 .tuteur {
     background: #ff8000;
-        p {
+    p {
         color: #fff;
     }
 }
@@ -57,4 +57,23 @@ mat-icon {
 
 p {
     font-size: 1rem;
+}
+
+.bg {
+    // background-image: url("../../assets/bg1.jpg");
+    background-attachment: fixed;
+    width: 100%;
+    height: 180px;
+    background-repeat: none;
+    background-size: cover;
+    marquee {
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+        }
+        h4 {
+            color: orange;
+        }
+    }
 }
