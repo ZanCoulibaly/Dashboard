@@ -25,6 +25,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { AuthGuard } from './services/auth.guard';
 import { ForgetpassComponent } from './forgetpass/forgetpass.component';
+import { AddRegionsComponent } from './add-regions/add-regions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { ForgetpassComponent } from './forgetpass/forgetpass.component';
     TuteurComponent,
     AccueilComponent,
     ForgetpassComponent,
+    AddRegionsComponent,
   ],
   imports: [
     BrowserModule,

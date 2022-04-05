@@ -33,7 +33,7 @@
         </mat-card>
     </mat-grid-tile><br>
     <mat-grid-tile>
-        <mat-card class="example-card accepter">
+        <mat-card class="example-card accepter" (click)="nmbreD()">
             <mat-card-title>Demande Accepter</mat-card-title>
             <mat-card-content>
                 <p>
@@ -44,7 +44,7 @@
         </mat-card>
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-card class="example-card rejetter">
+        <mat-card class="example-card rejetter" (click)="nmbreR()">
             <mat-card-title>Demande Rejetter</mat-card-title>
             <mat-card-content>
                 <p>
@@ -55,13 +55,13 @@
         </mat-card>
     </mat-grid-tile>
     <mat-grid-tile>
-        <mat-card class="example-card notifice">
-            <mat-card-title>Notifications</mat-card-title>
+        <mat-card class="example-card notifice" (click)="nmbreC()">
+            <mat-card-title>Classes</mat-card-title>
             <mat-card-content>
                 <p>
-                    <mat-icon>perm_phone_msg</mat-icon>
+                    <mat-icon>home</mat-icon>
                 </p><br>
-                <p>5</p>
+                <p>{{Classe}}</p>
             </mat-card-content>
         </mat-card>
     </mat-grid-tile>

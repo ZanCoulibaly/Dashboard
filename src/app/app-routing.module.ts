@@ -1,6 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
+import { AddRegionsComponent } from './add-regions/add-regions.component';
 import { CorbeilleComponent } from './corbeille/corbeille.component';
 import { EcoleComponent } from './ecole/ecole.component';
 import { ForgetpassComponent } from './forgetpass/forgetpass.component';
@@ -52,6 +53,10 @@ const routes: Routes = [
 {
   path: 'forgetpass',
   component: ForgetpassComponent
+},
+{
+  path: 'add-regions',
+  component: AddRegionsComponent
 }
 ];
 

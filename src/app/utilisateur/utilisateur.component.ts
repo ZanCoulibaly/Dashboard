@@ -19,10 +19,11 @@ export class UtilisateurComponent implements OnInit {
   constructor(private router: Router,
     public service: ServicesService)
     {
-      this.listess();
+
     }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.listess();
   }
 
   listess(){
@@ -44,9 +45,9 @@ export class UtilisateurComponent implements OnInit {
      return this.service.detailsParent(id).subscribe(
        data1=>{
         this.donne=JSON.parse(data1)
-        // console.log(this.donne);
+        console.log(this.donne);
          this.mode= 2;
-         // this.listess();
+         this.listess();
      })
    }
    editer(id:any){
@@ -59,9 +60,10 @@ export class UtilisateurComponent implements OnInit {
        }
      )
    }
-   modifier(ajouter:any, id:any){
-     return this.service.modifierTuteur(ajouter, id).subscribe(res=>{
+   modifier(parent: NgForm){
+     return this.service.modifierParent(this.delta[0].id, parent.value).subscribe(res=>{
        console.log(res);
+       this.mode=1;
 
      })
    }

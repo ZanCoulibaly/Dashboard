@@ -36,6 +36,7 @@ button {
 }
 
 .button1 {
+    margin-left: 70%;
     background-color: green;
     color: #fff;
     // font-size: 1.8rem;
@@ -58,4 +59,12 @@ button {
 h2 {
     margin-bottom: 20px;
     color: #000;
+}
+
+mat-list-item {
+    font-size: larger;
+}
+
+mat-list-item:nth-child(even) {
+    background-color: #dddddd;
 }

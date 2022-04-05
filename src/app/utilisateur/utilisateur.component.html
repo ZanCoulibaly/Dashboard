@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="90px">
-    <h2>Tuteur</h2>
+    <h2>Parent & Eleve</h2>
     <div fxFlex="100" *ngIf="mode==1">
         <div class="mat-elevation-z8">
 
@@ -47,12 +47,11 @@
           <mat-icon >arrow_back</mat-icon>
     </button>
             <mat-list role="list" class="det">
-                <b>Nom :</b> &nbsp; &nbsp;{{donne.nom}} <br>
-                <b>Prénom :</b> &nbsp; &nbsp;{{donne.prenom}} <br>
-                <b>Téléphone :</b>&nbsp; &nbsp;{{donne.numero}} <br>
-                <b>Profil :</b>&nbsp; &nbsp;{{donne.profile}} <br>
-                <b>Addresse : </b>&nbsp; &nbsp;{{donne.addresse}} <br>
-                <br>
+                <mat-list-item><b>Nom : </b>&nbsp; {{donne.nom}}</mat-list-item>
+                <mat-list-item><b>Prénom : </b>&nbsp; {{donne.prenom}}</mat-list-item>
+                <mat-list-item><b>Téléphone : </b>&nbsp; {{donne.numero}}</mat-list-item>
+                <mat-list-item><b>Profil : </b>&nbsp; {{donne.profile}}</mat-list-item>
+                <mat-list-item><b>Addresse : </b>&nbsp; {{donne.addresse}}</mat-list-item>
                 <button mat-raised-button class="button1" (click)="editer(donne.id)">Modifier</button>
             </mat-list>
         </div>
@@ -65,25 +64,25 @@
     </button>
 
             <!-- <div class="det"> -->
-            <form class="table-form">
+            <form class="table-form" #f="ngForm" (ngSubmit)="modifier(f)">
                 <table class="table-full-width" cellspacing="0">
                     <tr>
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Nom</mat-label>
-                                <input matInput [value]="delta.nom" name="nom">
+                                <input matInput [(ngModel)]="delta.nom" name="nom">
                             </mat-form-field>
                         </td>
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Prénom</mat-label>
-                                <input matInput [value]="delta.prenom" name="prenom">
+                                <input matInput [(ngModel)]="delta.prenom" name="prenom">
                             </mat-form-field>
                         </td>
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Matières à maîtriser</mat-label>
-                                <input matInput [value]="delta.cour" name="cour">
+                                <input matInput [(ngModel)]="delta.cour" name="cour">
                             </mat-form-field>
                         </td>
                     </tr>
@@ -92,11 +91,11 @@
                 <p>
                     <mat-form-field class="table-full-width" appearance="fill">
                         <mat-label>Téléphone</mat-label>
-                        <input matInput [value]="delta.numero" name="numero">
+                        <input matInput [(ngModel)]="delta.numero" name="numero">
                     </mat-form-field><br>
                     <mat-form-field class="table-full-width" appearance="fill">
                         <mat-label>Etablissement</mat-label>
-                        <input matInput [value]="delta.ecole" name="ecole">
+                        <input matInput [(ngModel)]="delta.ecole" name="ecole">
                     </mat-form-field>
                 </p>
 
@@ -105,13 +104,13 @@
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Addresse</mat-label>
-                                <input matInput [value]="delta.addresse" name="addresse">
+                                <input matInput [(ngModel)]="delta.addresse" name="addresse">
                             </mat-form-field>
                         </td>
                         <td>
                             <mat-form-field class="table-full-width" appearance="fill">
                                 <mat-label>Profile</mat-label>
-                                <input matInput [value]="delta.profile" name="profile">
+                                <input matInput name="profile" [(ngModel)]="delta.profile">
                             </mat-form-field>
                         </td>
                         <td>

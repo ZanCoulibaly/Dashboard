@@ -12,6 +12,9 @@ export class AccueilComponent implements OnInit {
   p: any;
   e: any;
   E: any;
+  Classe: any;
+  D: any;
+  R: any;
 
   constructor(private service: ServicesService) {
     this.tuteur();
@@ -20,7 +23,9 @@ export class AccueilComponent implements OnInit {
     this.ecole();
    }
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    this.nmbreClasse();
+  }
 
 
 
@@ -91,6 +96,67 @@ export class AccueilComponent implements OnInit {
       confirmButtonText:
         '<i class="fa fa-thumbs-up"></i> Merci !',
       confirmButtonAriaLabel: 'Merci ',
+    })
+  }
+  nmbreC(){
+    Swal.fire({
+      // background: '#ff8000',
+      title: '<strong>NombreTotale</strong>',
+      icon: 'info',
+      html:
+        '<b>Classe:  ' + this.Classe+'</b>',
+      showCloseButton: true,
+      confirmButtonColor: '#7da8ce',
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Merci !',
+      confirmButtonAriaLabel: 'Merci ',
+    })
+  }
+  nmbreD(){
+    Swal.fire({
+      // background: '#ff8000',
+      title: '<strong>NombreTotale</strong>',
+      icon: 'info',
+      html:
+        '<b>Accepter:  ' + this.D+'</b>',
+      showCloseButton: true,
+      confirmButtonColor: 'rgb(104, 172, 104)',
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Merci !',
+      confirmButtonAriaLabel: 'Merci ',
+    })
+  }
+  nmbreR(){
+    Swal.fire({
+      // background: '#ff8000',
+      title: '<strong>NombreTotale</strong>',
+      icon: 'info',
+      html:
+        '<b>Rejetter:  ' + this.R+'</b>',
+      showCloseButton: true,
+      confirmButtonColor: 'rgb(192, 82, 82)',
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Merci !',
+      confirmButtonAriaLabel: 'Merci ',
+    })
+  }
+
+
+  nmbreClasse(){
+    this.service.NmbreTotaleClasse().subscribe(res=>{
+      // console.log(res);
+      this.Classe= res;
+    })
+  }
+  nmbreDemande(){
+    this.service.NmbreTotalDemande().subscribe(res=>{
+      this.D= res;
+      console.log(res);
+    })
+  }
+  nmbreRejetter(){
+    this.service.NmbreTotalRejetter().subscribe(res=>{
+      this.R= res;
     })
   }
 }

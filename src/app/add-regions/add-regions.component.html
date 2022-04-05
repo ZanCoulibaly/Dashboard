@@ -7,16 +7,19 @@
 </head>
 
 <body>
+    <marquee behavior="" direction="left">
+        <h2>BIENVENUE SUR LA PAGE DE TUTORAT </h2>
+    </marquee>
     <div class="center">
-        <h1>Mot de pass oublié</h1>
-        <form method="post">
+        <h1>Ajouter Région</h1>
+        <form #add="ngForm" (ngSubmit)="ajouter(add)" novalidate>
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" name="nom" ngModel required>
                 <span></span>
-                <label>Nouveau</label>
+                <label>Nouveau région</label>
             </div>
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" name="confirmer" [(ngModel)]="confirmer" required>
                 <span></span>
                 <label>Confirmer</label>
             </div>

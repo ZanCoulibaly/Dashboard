@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class ServicesService {
-  host: String ='http://localhost:8080/api';
+  host: String = environment.url;
 
   constructor(private http: HttpClient, private route: Router) { }
 
@@ -44,12 +45,15 @@ export class ServicesService {
 
 
    // Eleve service operation
-   // listerEleve(){
-   //   return this.http.get(this.host+"/liste/eleve");
-   //  }
-   //  detailsEleve(id:any){
-   //    return this.http.get(this.host+"/trouver/"+id, {responseType:'text'});
-   //  }
+   NmbreTotaleClasse(){
+     return this.http.get(this.host+"/classe/totale");
+    }
+    NmbreTotalDemande(){
+      return this.http.get(this.host+"/demande/nombre/accepter");
+    }
+    NmbreTotalRejetter(){
+      return this.http.get(this.host+"/demande/nombre/rejetter");
+    }
    //  deleteEleve(id:any){
    //    return this.http.put(this.host+"/del/" + id, {responseType:'text'});
    //  }
@@ -110,5 +114,8 @@ export class ServicesService {
   }
   nombreEcole(){
     return this.http.get(this.host+"/nombre/ecole");
+  }
+  addRegion(add: any){
+    return this.http.post(this.host+"/region/add",add, {responseType:'text'});
   }
 }
